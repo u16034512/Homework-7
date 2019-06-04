@@ -1,0 +1,35 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddItem</title>
+</head>
+<body>
+    <div class="Heading">
+        <h1>Add Item</h1>
+    </div>
+    <div class="Item">
+        <lable for="subName">Name: </lable>
+        <input type="text" name="subName" />
+        <br />
+        <lable for="subDescription">Description: </lable>
+        <input type="text" name="subSurname" />
+        <br />
+        <lable for="suPrice">Price: </lable>
+        <input type="number" min="1" name="subPrice" />
+        <br />
+        <lable for="subQuantityAvailable">Quantity Available: </lable>
+        <input type="number" min="1" name="subQuantityAvailable" />
+        <br />
+    </div>
+    <div class="button">
+        <input type="button" value="Save" />
+        <input type="button" value="Cancel" onclick="window.location.href = '@Url.Action("Index", "Shop")';" />
+    </div>
+</body>
+</html>

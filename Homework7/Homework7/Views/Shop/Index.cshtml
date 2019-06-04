@@ -1,0 +1,49 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div class="Heading">
+        <h1>My shop Name</h1>
+        <a href="@Url.Action("Part2", "Shop")" class="elements"><span>Click here for Part 2</span></a>
+    </div>
+    <div class="button">
+        <input type="button" value="Add" onclick="window.location.href = '@Url.Action("AddItem", "Shop")';" />
+    </div>
+    <div class="table">
+        <table>
+            <tr>
+                <th>Shop Items</th>
+            </tr>
+            <tr>
+                <th>Item Name</th>
+                <th>Description</th>
+                <th>Price (R)</th>
+                <th>Quantity Available</th>
+            </tr>
+        </table>
+    </div>
+    <div class="Box">
+        <div class="Boxbar">
+            <h3>Sort Functions:</h3>
+        </div>
+        <div class="boxcontent">
+            <div class="column">
+                <input type="button" value="Sort by Name" onclick="SortName()" />
+                <input type="button" value="Sort by Price" onclick="SortPrice()" />
+                <input type="button" value="Sort by Quantity" onclick="SortQuantity()" />
+            </div>
+            <div class="column">
+                <input type="button" value="How many items are in the list?" onclick="ItemsList()" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>
